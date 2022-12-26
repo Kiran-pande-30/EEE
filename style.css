@@ -1,0 +1,265 @@
+/* Home page fonts  */
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    background-color: black;
+    width: 100%;
+}
+
+.nav_texts{
+    color: yellow;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 12%;
+    transition: all 0.50s ease;
+    margin-top: 1rem;
+}
+
+.navbar{
+    display: flex;
+}
+
+.li_navbar{
+    padding-left: 2rem;
+}
+
+.navbar a{
+    color: yellow;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 0;
+    /* margin: 0 30px; */
+    transition: all 0.50s ease;
+}
+
+.navbar a:hover{
+    color: yellowgreen;
+}
+
+#click{
+    display: none;
+}
+.home-text{
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    z-index: -1;
+}
+
+.home-text::before{
+    content: attr(data-text);
+    position: relative;
+    color: #0fe794f0;
+    width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #0fe794f0;
+    animation: animate 5s linear infinite;
+    filter:drop-shadow(10px 10px 51px #0fe794f0);
+}
+
+@keyframes animate{
+    0%, 100%{
+        width: 0%;
+    }
+    70% , 80%{
+        width: 170px;
+    }
+}
+
+@media (max-width: 625px) {
+
+    
+    #header ul{
+        position:fixed;
+        top: 80px;
+        left: -100%;
+        background-color: rgb(152, 155, 1);
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.7s ease;
+    }
+    #click:checked ~ ul{
+         left: 0;
+    }
+
+    
+    .li_navbar{
+        padding-left: 0rem;
+    }
+
+    #header ul li{
+        margin: 35px;
+    }
+
+    #header ul li a{
+        font-size: 24px;
+    }
+    #header .menu-btn i {
+        display: block;
+    }
+    label{
+        position: fixed;
+        right: 30px;
+        top: 1.5rem;
+    }
+    #section-home{
+        /* height: 160vh; */
+        min-width: 625px;
+    }
+}
+
+@media only screen and (max-device-width:768px) {
+    .main_text{
+        height: 70vh;
+    }
+    .text_1{
+
+    }
+    .text_2{
+
+    }
+}
+.menu-btn i{
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+#section-home{
+    /* min-height: 100vh;
+    display: flex; */
+    align-items: center;
+    padding-left: 1.5rem;
+}
+.text-zone h1{
+    font-size: 4.3rem;
+    line-height: 80px;
+    min-width: 789px;
+}
+
+.text-zone img{
+    width: 30px;
+    height: auto;
+}
+
+.text-zone{
+    width: 100%;
+}
+
+.text-zone .gray-text{
+    margin-top: 30px;
+    color: greenyellow;
+    letter-spacing: 1px;
+    font-size: 20px;
+    position: relative;
+    z-index: -1;
+}
+
+.main_text{
+    height: 90vh;
+    text-align: center;
+    padding: 210px 9px 9px 9px;
+}
+
+.text_1{
+    font-size: 3.1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #FED049;
+
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate{
+    0%, 100%{
+        text-shadow: -3px -3px 0 #FF6E31, 3px 3px 0 #FFFF00;
+
+    }
+    25%{
+        text-shadow: 3px 3px 0 #FF6E31, -3px -3px 0 #FFFF00;
+    }
+    50%{
+        text-shadow: -3px 3px 0 #FF6E31, -3px 3px 0 #FFFF00;
+
+    }
+    75%{
+        text-shadow: 3px -3px 0 #FF6E31, 3px -3px 0 #FFFF00;
+
+    }
+}
+.text_2{
+    font-size: 5.1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    color: #FED049;
+
+    animation: animate 0.5s linear infinite;
+}
+
+.text_2:hover:before{
+    top: -20px;
+    left: 20px;
+}
+
+.text_3{
+    font-size: 3.1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #FED049;
+
+    animation: animate 0.5s linear infinite;
+}
+
+@media (max-width: 792px){
+    .text_2{
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 626px ){
+    .text_2{
+        font-size: 3em;
+    }
+
+    .text_1{
+        font-size: 2em;
+    }
+}
+
+@media (max-width:474px){
+    .text_2{
+        font-size: 2.7em ;
+    }
+    .text_1{
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width:428px){
+    .text_2{
+        font-size: 3.5em ;
+    }
+}
